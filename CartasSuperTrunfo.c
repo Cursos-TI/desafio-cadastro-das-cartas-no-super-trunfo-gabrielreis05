@@ -17,6 +17,8 @@ int main() {
     // Cadastro das Cartas:
     // Sugestão: Utilize a função scanf para capturar as entradas do usuário para cada atributo.
     // Solicite ao usuário que insira as informações de cada cidade, como o código, nome, população, área, etc.
+    printf("*** Cadastro Carta 1 *** \n");
+
     printf("Insira o Estado da carta 1: ");
     scanf("%s", &estado1);
 
@@ -39,6 +41,8 @@ int main() {
     scanf("%d", &pontosturisticos1);
 
     printf("\n");
+
+    printf("*** Cadastro Carta 2 *** \n");
 
     printf("Insira o Estado da carta 2: ");
     scanf("%s", &estado2);
@@ -75,13 +79,13 @@ int main() {
     printf("PIB: %.2f bilhões de reais \n", pib1);
     printf("Número de Pontos Turísticos: %d \n", pontosturisticos1);
 
-    densidade1 = população1 / area1;
+    densidade1 = (float)população1 / area1;
 
     printf("Densidade Populacional: %.2f hab/km² \n", densidade1);
 
-    pibcap1 = pib1 / população1;
+    pibcap1 = (pib1 * 1000000000) / (float)população1;
 
-    printf("PIB per Capita: %f reais \n", pibcap1);
+    printf("PIB per Capita: %.2f reais \n", pibcap1);
 
     printf("\n");
     printf("Carta 2: \n");
@@ -93,13 +97,13 @@ int main() {
     printf("PIB: %.2f bilhões de reais \n", pib2);
     printf("Número de Pontos Turísticos: %d \n", pontosturisticos2);
 
-    densidade2 = população2 / area2;
+    densidade2 = (float)população2 / area2;
     
     printf("Densidade Populacional: %.2f hab/km² \n", densidade2);
     
-    pibcap2 = pib2 / população2;
+    pibcap2 = (pib2 * 1000000000) / (float)população2;
 
-    printf("PIB per Capita: %f reais \n", pibcap2);
+    printf("PIB per Capita: %.2f reais \n", pibcap2);
 
     return 0;
 }

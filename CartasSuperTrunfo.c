@@ -12,8 +12,9 @@ int main() {
 
     unsigned long int populacao1, populacao2;
     int pontosturisticos1, pontosturisticos2;
-    float area1, area2, pib1, pib2, densidade1, densidade2, pibcap1, pibcap2;
-    char estado1[50], estado2[50], cidade1[50], cidade2[50], codigo1[4], codigo2[4];
+    float area1, area2, pib1, pib2, densidade1, densidade2, pibcap1, pibcap2, superpoder1, superpoder2;
+    char estado1[4], estado2[4], cidade1[50], cidade2[50], codigo1[4], codigo2[4];
+    int populacao, area, pib, pontosturisticos, densidade, pibcap, superpoder;
 
     // Cadastro das Cartas:
     // Sugestão: Utilize a função scanf para capturar as entradas do usuário para cada atributo.
@@ -88,6 +89,10 @@ int main() {
 
     printf("PIB per Capita: %.2f reais \n", pibcap1);
 
+    superpoder1 = populacao1 + area1 + pib1 + pontosturisticos1 + (1 / densidade1) + pibcap1;
+
+    printf("Super Poder: %.2f \n", superpoder1);
+
     printf("\n");
     printf("Carta 2: \n");
     printf("Estado: %s \n", estado2);
@@ -105,6 +110,34 @@ int main() {
     pibcap2 = (pib2 * 1000000000) / (float)populacao2;
 
     printf("PIB per Capita: %.2f reais \n", pibcap2);
+
+    superpoder2 = populacao2 + area2 + pib2 + pontosturisticos2 + (1 / densidade2) + pibcap2;
+
+    printf("Super Poder: %.2f \n", superpoder2);
+
+    printf("\n");
+    printf("*** Comparação das Cartas *** \n");
+
+    populacao = populacao1 > populacao2;
+    printf("População: Carta 1 venceu: (%d) \n", populacao);
+
+    area = area1 > area2;
+    printf("Área: Carta 1 venceu: (%d) \n", area);
+
+    pib = pib1 > pib2;
+    printf("PIB: Carta 1 venceu: (%d) \n", pib);
+
+    pontosturisticos = pontosturisticos1 > pontosturisticos2;
+    printf("Pontos Turísticos: Carta 1 venceu: (%d) \n", pontosturisticos);
+
+    densidade = densidade1 < densidade2;
+    printf("Densida Populacional: Carta 1 venceu: (%d) \n", densidade);
+
+    pibcap = pibcap1 > pibcap2;
+    printf("PIB per Capita: Carta 1 venceu: (%d) \n", pibcap);
+
+    superpoder = superpoder1 > superpoder2;
+    printf("Super Poder: Carta 1 venceu: (%d) \n", superpoder);
 
     return 0;
 }

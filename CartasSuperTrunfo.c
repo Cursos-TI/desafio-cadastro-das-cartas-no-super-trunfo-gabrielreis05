@@ -172,7 +172,7 @@ int main() {
     } else if((populacao1 > populacao2) || (area1 > area2) || (pib1 > pib2) || (pontosturisticos1 > pontosturisticos2) || (densidade1 < densidade2) || (pibcap1 > pibcap2) || (superpoder1 > superpoder2)) {
         printf("Carta 1 (%s) venceu!!! \n", cidade1);
     } else {
-        printf("CArta 2 (%s) venceu!!! \n", cidade2);
+        printf("Carta 2 (%s) venceu!!! \n", cidade2);
     }
 
     return 0;

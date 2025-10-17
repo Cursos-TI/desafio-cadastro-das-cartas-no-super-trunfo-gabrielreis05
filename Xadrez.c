@@ -1,5 +1,6 @@
 #include <stdio.h>
 
+//recursividades adicionadas
 void torre(int casas) {
     if (casas > 0){
         printf("Direita\n");
